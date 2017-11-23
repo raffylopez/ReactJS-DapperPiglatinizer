@@ -1,0 +1,19 @@
+
+    return [
+      {
+        id: 1,
+        text: "Calibrate thermodynamic beam"
+      },
+      {
+        id: 2,
+        text: "Buy hero suits at bulk discount"
+      },
+      {
+        id: 3,
+        text: "Activate camouflage defense"
+      },
+      {
+        id: 4,
+        text: "Improve reactor energy output at hq"
+      }
+    ];

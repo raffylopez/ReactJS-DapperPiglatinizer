@@ -1,0 +1,71 @@
+/*
+ * redux-test.jsx
+ * Copyright (C) 2017 volare <volare@Rain.local>
+ *
+ * Distributed under terms of the MIT license.
+ */
+
+var redux = require('redux');
+
+initState = {
+  searchText: 'foo',
+  showCompleted: false,
+  labelValue: 'aloha',
+  todos: []
+};
+
+// state computer
+var reducer = (state = initState, action) => {
+    console.log(action.type)
+  switch (action.type) {
+    case 'TOGGLE_SHOW_COMPLETED':
+      return Object.assign(state, {
+        showCompleted: !state.showCompleted
+      })
+    case 'CHANGE_LABEL_VALUE':
+      return Object.assign(state, {
+        labelValue: action.labelValue
+      })
+    case 'UBER_ACTION':
+      console.log("hi")
+      return Object.assign(state, {
+        searchText: action.searchText
+      })
+    default:
+      return state;
+  }
+  // this must not be reached
+}
+
+var store = redux.createStore(reducer);
+
+initState = {
+  searchText: 'foo',
+  showCompleted: false,
+  labelValue: 'aloha',
+  todos: []
+};
+
+var displayState = () => {
+  console.log(
+    store.getState()
+  );
+}
+
+displayState()
+var action = {
+  searchText: 'bar',
+  type: 'UBER_ACTION'
+};
+
+store.dispatch(action);
+displayState()
+
+store.dispatch({
+  type: 'CHANGE_LABEL_VALUE',
+  labelValue: 'hullo'
+})
+
+store.dispatch({ type: 'TOGGLE_SHOW_COMPLETED' })
+store.dispatch({ type: 'TOGGLE_SHOW_COMPLETED' })
+exec("sav " . expand("%:p:h") . ".PREV"
