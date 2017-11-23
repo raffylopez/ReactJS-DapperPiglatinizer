@@ -4,37 +4,35 @@
  *
  * Distributed under terms of the MIT license.
  */
-import React, { Component } from 'react'
-import Nav from 'Nav'
-import TodoApp from 'TodoApp'
+import React, { Component } from "react";
+import Nav from "Nav";
+import TodoApp from "TodoApp";
+var { Helmet } = require('react-helmet')
 
 class Main extends Component {
   constructor(props: any) {
-    super(props)
-    this.state = {
-    }
-    this.method = this.method.bind(this)
+    super(props);
+    this.state = {};
+    this.method = this.method.bind(this);
   }
 
-  method() {
-
-  }
+  method() {}
 
   render() {
     return (
       <div>
-        <Nav/>
+        <Nav />
         This is Main.jsx
-        <TodoApp/>
+        <div className="medium-8 large-10 small-centered">
+          {this.props.children}
+        </div>
       </div>
-    )
+    );
   }
 }
 
-Main.propTypes = {
-}
+Main.propTypes = {};
 
-Main.defaultProps = {
-}
+Main.defaultProps = {};
 
-module.exports = Main
+module.exports = Main;

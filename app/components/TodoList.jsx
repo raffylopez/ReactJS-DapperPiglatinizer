@@ -17,7 +17,6 @@ class TodoList extends Component {
   }
 
   renderTodos = (todos) => {
-    // return todos.map(x=><h1 key={x.id}>{ x.text }</h1>)
     return todos.map(item=><Todo key={item.id} {...item}  />)
   }
   method() {
@@ -27,8 +26,7 @@ class TodoList extends Component {
   render() {
     var { todos } = this.props
     return (
-      <div>
-        This is TodoList.jsx
+      <div className="callout success">
         {this.renderTodos(todos)}
       </div>
     )

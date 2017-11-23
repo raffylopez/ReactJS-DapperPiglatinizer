@@ -18,9 +18,21 @@ class Nav extends Component {
   render() {
     return (
       <div className="top-bar">
-        <div className="topbar-left">
+        <div className="top-bar-left">
           <ul className="menu">
-            <li>TodoApp</li>
+            <li>
+              <p style={{ fontFamily: "Verdana" }}>Multiplexed TodoApp</p>
+            </li>
+          </ul>
+        </div>
+        <div className="top-bar-right">
+          <ul className="menu">
+            <li>
+              <input type="search" />
+            </li>
+            <li>
+              <button className="button">Find</button>
+            </li>
           </ul>
         </div>
       </div>

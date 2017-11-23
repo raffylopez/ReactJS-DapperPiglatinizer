@@ -1,7 +1,12 @@
 var webpack = require('webpack');
+var dashboard = require('webpack-dashboard');
+var dashboardPlugin = require('webpack-dashboard/plugin');
 var path = require('path');
 
 module.exports = {
+  devServer: {
+  hotOnly: true
+  },
   entry: [
     'script!jquery/dist/jquery.min.js',
     'script!foundation-sites/dist/foundation.min.js',
@@ -11,6 +16,7 @@ module.exports = {
     jquery: 'jQuery'
   },
   plugins: [
+    new dashboardPlugin(dashboard.setData),
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery'
@@ -18,15 +24,24 @@ module.exports = {
   ],
   output: {
     path: __dirname,
-    filename: './public/bundle.js'
+    // where bundle.js is created
+    // has different effect when using webpack devserver vs. express
+    // change filename to ./public/bundle.js when using express
+    filename: './bundle.js',  
+    publicPath: '/' 
+    // the prefixPath, as in localhost/{publicPath}/{filename}
+    // prepended to assets like foo.jpg in html
   },
   resolve: {
     root: __dirname,
     modulesDirectories: [
       'node_modules',
-      './app/components/'
+      './app/components/',
+      './app/redux-playground/',
+      './app/api/'
     ],
     alias: {
+      app: 'app',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']
