@@ -6,6 +6,7 @@
  */
 import React, { Component } from "react";
 var actions = require("../actions/actions.jsx");
+import firebase, {firebaseRef} from 'app/firebase'
 var { connect } = require("react-redux");
 var uuid = require("uuid");
 
@@ -17,16 +18,19 @@ class TodoPartDeuxForm extends Component {
   }
 
   method() {}
+
   clickHandler = e => {
     e.preventDefault();
     var input = this.refs.txt.value;
     if (input == "") return 
     var { dispatch } = this.props;
+    
+
     dispatch(
       actions.addTodo({
+        id: uuid(),
         text: this.refs.txt.value,
         completed: false,
-        id: uuid()
       })
     );
     this.refs.txt.value = "";

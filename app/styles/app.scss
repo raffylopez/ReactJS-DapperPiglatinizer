@@ -4,5 +4,45 @@
 @import "base/foundation-settings";
 @import "foundation";
 @include foundation-everything;
-
+//@import url(https://fonts.googleapis.com/css?family=Cinzel+Decorative);
+//@import url(https://fonts.googleapis.com/css?family=Noto+Serif);
+@import url('https://fonts.googleapis.com/css?family=Anton|Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Fondamento');
 // Components
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans',serif;
+  height: 100%;
+}
+
+h2 {
+  //font-family: 'Cinzel Decorative',cursive !important;
+  font-family: 'Anton', sans-serif !important;
+  //font-family: 'Fondamento', sans-serif !important;
+
+
+}
+//br {
+//  line-height: 250%;
+//}
+
+h4#piglatintext {
+  //font-family: 'Noto Serif',cursive !important;
+  //font-family: 'Fjalla One', sans-serif !important;
+  //font-family: 'Raleway', sans-serif;
+  font-family: 'Fondamento', sans-serif;
+}
+
+div.left {
+  height: 100%;
+}
+.sidebar {
+  //position: fixed;
+  background-color: #34495e;
+  //top: 20px;
+  //bottom: 0;
+}

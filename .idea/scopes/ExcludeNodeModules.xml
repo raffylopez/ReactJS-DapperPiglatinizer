@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="ExcludeNodeModules" pattern="!file[your_project]:node_modules&amp;&amp;!file[react-course-boilerplate-app]:.idea/*&amp;&amp;!file[react-course-boilerplate-app]:app/*&amp;&amp;!file[react-course-boilerplate-app]:public/*" />
+</component>

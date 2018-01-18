@@ -16,8 +16,7 @@ class FoobarThingie extends Component {
   render() {
     return (
       <div>
-        ALOHA:{this.props.text}
-        
+       ORIGINAL: {this.props.text}
       </div>
     )
   }

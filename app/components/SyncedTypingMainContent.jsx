@@ -18,7 +18,7 @@ class SyncedTypingMainContent extends Component {
   reverse = s=> s.split("").reverse().join("");
 
   shouldComponentUpdate() {
-    return false
+    return true
   }
 
   method() {
@@ -28,10 +28,7 @@ class SyncedTypingMainContent extends Component {
   render() {
     return (
       <div>
-        {
-        this.reverse(this.props.text)
-        }
-        
+        REVERSED: { this.reverse(this.props.text.toLowerCase()) }
       </div>
     )
   }

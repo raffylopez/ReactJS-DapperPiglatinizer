@@ -21,7 +21,7 @@ class Nav extends Component {
         <div className="top-bar-left">
           <ul className="menu">
             <li>
-              <p style={{ fontFamily: "Verdana" }}>Multiplexed TodoApp</p>
+              <h4 style={{ fontFamily: "Verdana" }}>React-Course-Boilerplate-App</h4>
             </li>
           </ul>
         </div>

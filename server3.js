@@ -11,4 +11,4 @@ var server = new WebpackDevServer(compiler, {
     quiet: true,
     historyApiFallback: {index: 'index.html'}
 });
-server.listen(8080);
+server.listen(8090);

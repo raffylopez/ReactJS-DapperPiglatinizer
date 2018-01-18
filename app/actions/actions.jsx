@@ -1,3 +1,4 @@
+import thunk from 'redux-thunk'
 export const changeColor = (newColor) => ({
   type: 'CHANGE_COLOR',
   color: newColor

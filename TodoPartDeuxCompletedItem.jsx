@@ -4,35 +4,24 @@
  *
  * Distributed under terms of the MIT license.
  */
-import React, { Component } from 'react'
-
+import React, { Component } from "react";
 
 class TodoPartDeuxCompletedItem extends Component {
   constructor(props: any) {
-    super(props)
-    this.state = {
-
-    }
-    this.method = this.method.bind(this)
+    super(props);
+    this.state = {};
+    this.method = this.method.bind(this);
   }
 
-  method() {
-
-  }
+  method() {}
 
   render() {
-    return (
-      <div>
-        This is TodoPartDeuxCompletedItem.jsx
-      </div>
-    )
+    return <div>This is TodoPartDeuxCompletedItem.jsx</div>;
   }
 }
 
-TodoPartDeuxCompletedItem.propTypes = {
-}
+TodoPartDeuxCompletedItem.propTypes = {};
 
-TodoPartDeuxCompletedItem.defaultProps = {
-}
+TodoPartDeuxCompletedItem.defaultProps = {};
 
-module.exports = TodoPartDeuxCompletedItem
+module.exports = TodoPartDeuxCompletedItem;
